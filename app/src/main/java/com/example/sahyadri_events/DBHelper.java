@@ -64,7 +64,30 @@ public class DBHelper extends SQLiteOpenHelper{
         }
 
     }
-
+    public Boolean checkMail(String mail)
+    {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor=DB.rawQuery("Select * from student_details where mail=?",new String[]{mail});
+        if(cursor.getCount()>0) {
+                return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public Boolean checkAuthentication(String mail,String password)
+    {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor=DB.rawQuery("Select * from student_details where mail=? and password=?",new String[]{mail,password});
+        if(cursor.getCount()>0) {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     public Cursor getData(String mail)
     {
         SQLiteDatabase DB = this.getWritableDatabase();

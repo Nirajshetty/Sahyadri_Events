@@ -57,7 +57,7 @@
             android:layout_height="237dp">
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/btn_register"
                 android:layout_width="110dp"
                 android:layout_height="60dp"
                 android:text="LOGIN"

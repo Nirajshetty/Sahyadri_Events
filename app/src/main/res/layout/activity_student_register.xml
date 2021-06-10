@@ -45,7 +45,7 @@
             android:layout_height="353dp">
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/btn_register"
                 android:layout_width="110dp"
                 android:layout_height="60dp"
                 android:text="REGISTER"
@@ -70,6 +70,7 @@
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -90,6 +91,7 @@
                 app:layout_constraintVertical_bias="0.326">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -109,6 +111,7 @@
                 app:layout_constraintVertical_bias="0.112">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mail"
                     android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
