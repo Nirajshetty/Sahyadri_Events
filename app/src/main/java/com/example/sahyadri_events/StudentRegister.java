@@ -21,7 +21,7 @@ public class StudentRegister extends AppCompatActivity {
         name=findViewById(R.id.name);
         password=findViewById(R.id.password);
 
-        btn_register=findViewById(R.id.btn_register);
+        btn_register=findViewById(R.id.btn_admin_login);
         DBHelper db =new DBHelper(this);
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override

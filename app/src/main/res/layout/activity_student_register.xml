@@ -45,7 +45,7 @@
             android:layout_height="353dp">
 
             <Button
-                android:id="@+id/btn_register"
+                android:id="@+id/btn_admin_login"
                 android:layout_width="110dp"
                 android:layout_height="60dp"
                 android:text="REGISTER"
