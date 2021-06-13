@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#088F8F"
-    tools:context=".AdminLogin">
+    tools:context=".StudentRegisterEvent">
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
@@ -18,8 +19,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="366dp"
-        android:layout_height="416dp"
+        android:layout_width="358dp"
+        android:layout_height="258dp"
         android:layout_marginBottom="16dp"
         app:cardCornerRadius="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,22 +28,22 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="487dp">
+            android:layout_width="369dp"
+            android:layout_height="569dp">
 
 
             <Button
                 android:id="@+id/btn_admin_login"
                 android:layout_width="129dp"
                 android:layout_height="57dp"
-                android:text="Add Event"
+                android:text="Register"
                 app:backgroundTint="#088F8F"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.818" />
+                app:layout_constraintVertical_bias="0.369" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout1"
@@ -57,11 +58,10 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin_id"
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
-                    android:hint="   Event Name"
+                    android:hint="   College mail  ID"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,59 +74,15 @@
                 app:layout_constraintHorizontal_bias="0.545"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.462">
+                app:layout_constraintVertical_bias="0.202">
 
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/admin1_id"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="56dp"
                     android:background="#FFFFFF"
-                    android:hint="   Event ID(EventName_EventDate)"
-                    android:textSize="14sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
-                android:layout_width="256dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.564"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.228">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin2_id3"
-                    android:layout_width="278dp"
-                    android:layout_height="100dp"
-                    android:background="#FFFFFF"
-                    android:gravity="top"
-                    android:hint="   Event  Description(with schedule)"
-                    android:inputType="text|textMultiLine"
-                    android:textSize="14sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout5"
-                android:layout_width="262dp"
-                android:layout_height="52dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.596"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.622">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin1_id5"
-                    android:layout_width="252dp"
-                    android:layout_height="match_parent"
-                    android:background="#FFFFFF"
-                    android:hint="   Meet Link"
+                    android:hint="   Event ID"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 

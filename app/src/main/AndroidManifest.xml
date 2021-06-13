@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sahyadri_events">
-        <activity android:name=".Admin_Add_event"></activity>
+        <activity android:name=".StudentRegisterEvent"></activity>
+        <activity android:name=".StudentHomePage" />
+        <activity
+            android:name=".Admin_Add_event"
+            android:parentActivityName=".AdminHomePage" />
         <activity android:name=".AdminHomePage" />
         <activity android:name=".StudentRegister" />
         <activity android:name=".StudentLogin" />

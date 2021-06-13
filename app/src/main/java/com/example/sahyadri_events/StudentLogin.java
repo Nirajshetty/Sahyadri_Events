@@ -39,7 +39,7 @@ public class StudentLogin extends AppCompatActivity {
                     Boolean checkInserted = db.checkAuthentication(mailTXT, passwordTXT);
                     if (checkInserted == true) {
                         Toast.makeText(StudentLogin.this, "Successfully Logged in!", Toast.LENGTH_SHORT).show();
-                        //openStudentLogin();
+                        openStudentHomepage();
                     } else {
                         Toast.makeText(StudentLogin.this, "Login failed", Toast.LENGTH_SHORT).show();
                     }
@@ -64,6 +64,10 @@ public class StudentLogin extends AppCompatActivity {
     }
     public void openStudentRegister(){
         Intent intent=new Intent(this, StudentRegister.class);
+        startActivity(intent);
+    }
+    public void openStudentHomepage(){
+        Intent intent=new Intent(this, StudentHomePage.class);
         startActivity(intent);
     }
 }
