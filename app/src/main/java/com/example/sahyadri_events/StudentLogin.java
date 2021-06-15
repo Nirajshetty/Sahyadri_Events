@@ -37,7 +37,7 @@ public class StudentLogin extends AppCompatActivity {
                 }
                 else {
                     Boolean checkInserted = db.checkAuthentication(mailTXT, passwordTXT);
-                    if (checkInserted == true) {
+                    if (checkInserted) {
                         Toast.makeText(StudentLogin.this, "Successfully Logged in!", Toast.LENGTH_SHORT).show();
                         openStudentHomepage();
                     } else {
@@ -46,14 +46,6 @@ public class StudentLogin extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
-
-
-
-
         clickhere=findViewById(R.id.clickhere);
         clickhere.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +59,7 @@ public class StudentLogin extends AppCompatActivity {
         startActivity(intent);
     }
     public void openStudentHomepage(){
-        Intent intent=new Intent(this, StudentHomePage.class);
+        Intent intent=new Intent(this, AdminHomePage.class);
         startActivity(intent);
     }
 }

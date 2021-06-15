@@ -6,14 +6,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper{
     public DBHelper(Context context){
-        super(context,"Sahyadri_events1.db",null,1);
+        super(context,"Sahyadriss.db",null,2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table student_details(name TEXT ,mail TEXT primary key,password TEXT,usn TEXT,sem NUMBER,branch TEXT)");
         db.execSQL("create table admin_details(admin_name TEXT ,admin_mail TEXT,admin_password TEXT,admin_id TEXT primary key,admin_vector BLOB)");
-        db.execSQL("create table events(event_id TEXT ,admin_mail TEXT,admin_password TEXT,admin_id TEXT primary key,admin_vector BLOB)");
     }
 
     @Override

@@ -91,8 +91,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="179dp"
-        android:layout_height="128dp"
+        android:layout_width="269dp"
+        android:layout_height="205dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
