@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.sahyadri_events.R;
-import com.example.sahyadri_events.StudentLogin;
-
 public class MainActivity extends AppCompatActivity {
     private Button btn_admin;
     private Button btn_student;
@@ -17,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn_admin=  findViewById(R.id.btn_admin);
-        btn_student=  findViewById(R.id.btn_student);
+        btn_student=  findViewById(R.id.btn_stu);
         btn_admin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
@@ -36,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openStudentLogin(){
-        Intent intent=new Intent(this, StudentLogin.class);
-        startActivity(intent);
+        Intent intents=new Intent(this, StudentLoginPage.class);
+        startActivity(intents);
     }
 }

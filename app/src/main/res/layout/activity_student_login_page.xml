@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#088F8F">
+    android:background="#088F8F"
+    tools:context=".StudentLoginPage">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -39,7 +40,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent">
 
     </androidx.cardview.widget.CardView>
 
@@ -58,7 +59,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_student_login"
                 android:layout_width="110dp"
                 android:layout_height="60dp"
                 android:text="LOGIN"
@@ -157,5 +158,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.217"
         app:srcCompat="@drawable/ic_undraw_access_account_re_8spm__2_" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

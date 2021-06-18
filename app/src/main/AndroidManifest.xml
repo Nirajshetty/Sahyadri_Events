@@ -9,19 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sahyadri_events">
-        <activity android:name=".Admin_Registrations"
-            android:parentActivityName=".AdminHomePage"></activity>
-        <activity android:name=".Student_Registrations"
-            android:parentActivityName=".StudentHomePage" />
-        <activity android:name=".StudentRegisterEvent"
-            android:parentActivityName=".StudentHomePage" />
+        <activity android:name=".ssss"></activity>
+        <activity android:name=".StudentLandingPage" />
+        <activity android:name=".StudentLoginPage" />
+        <activity android:name=".StudentProfile" />
+        <activity
+            android:name=".Admin_Registrations"
+            android:parentActivityName=".AdminHomePage" />
+        <activity
+            android:name=".Student_Registrations"
+            android:parentActivityName=".StudentLandingPage" />
+        <activity
+            android:name=".StudentRegisterEvent"
+            android:parentActivityName=".StudentLandingPage" />
         <activity
             android:name=".Admin_Add_event"
             android:parentActivityName=".AdminHomePage" />
-        <activity android:name=".StudentHomePage" />
         <activity android:name=".AdminHomePage" />
         <activity android:name=".StudentRegister" />
-        <activity android:name=".StudentLogin" />
         <activity android:name=".AdminLogin" />
         <activity android:name=".MainActivity">
             <intent-filter>

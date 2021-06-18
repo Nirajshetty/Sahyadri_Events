@@ -44,5 +44,6 @@ public class AdminLogin extends AppCompatActivity {
     public void openAdminHome(){
         Intent intent=new Intent(this, AdminHomePage.class);
         startActivity(intent);
+        finish();
     }
 }

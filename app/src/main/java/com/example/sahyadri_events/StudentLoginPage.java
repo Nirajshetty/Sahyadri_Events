@@ -12,19 +12,17 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class StudentLogin extends AppCompatActivity {
+public class StudentLoginPage extends AppCompatActivity {
     TextView clickhere;
     EditText mail,password;
     Button btn_login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_student_login);
-
-
+        setContentView(R.layout.activity_student_login_page);
         mail=findViewById(R.id.mail);
         password=findViewById(R.id.password);
-        btn_login=findViewById(R.id.btn_login);
+        btn_login=findViewById(R.id.btn_student_login);
         DBHelper db =new DBHelper(this);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,15 +31,15 @@ public class StudentLogin extends AppCompatActivity {
                 String passwordTXT=password.getText().toString();
                 if(mail.equals("") || password.equals(""))
                 {
-                    Toast.makeText(StudentLogin.this,"Please Enter all the Details",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StudentLoginPage.this,"Please Enter all the Details",Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Boolean checkInserted = db.checkAuthentication(mailTXT, passwordTXT);
                     if (checkInserted) {
-                        Toast.makeText(StudentLogin.this, "Successfully Logged in!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(StudentLoginPage.this, "Successfully Logged in!", Toast.LENGTH_SHORT).show();
                         openStudentHomepage();
                     } else {
-                        Toast.makeText(StudentLogin.this, "Login failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(StudentLoginPage.this, "Login failed", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -55,11 +53,15 @@ public class StudentLogin extends AppCompatActivity {
         });
     }
     public void openStudentRegister(){
-        Intent intent=new Intent(this, StudentRegister.class);
-        startActivity(intent);
+        Intent intent1=new Intent(this, StudentRegister.class);
+        startActivity(intent1);
     }
     public void openStudentHomepage(){
-        Intent intent=new Intent(this, AdminHomePage.class);
-        startActivity(intent);
+
+        String mailTXT=mail.getText().toString();
+        Intent intent3=new Intent(getApplicationContext(), StudentLandingPage.class);
+        intent3.putExtra("message_key", mailTXT);
+        startActivity(intent3);
+        finish();
     }
 }

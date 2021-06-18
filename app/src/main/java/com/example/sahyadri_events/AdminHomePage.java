@@ -42,6 +42,7 @@ Button btn_addEvent,btn_logout,btn_admin_registrations;
     public void logout(){
         Intent intent=new Intent(this,AdminLogin.class);
         startActivity(intent);
+        finish();
     }
     public void openAdmin_registrations(){
         Intent intent=new Intent(this,Admin_Registrations.class);

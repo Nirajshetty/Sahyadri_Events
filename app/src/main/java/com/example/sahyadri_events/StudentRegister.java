@@ -58,7 +58,7 @@ public class StudentRegister extends AppCompatActivity {
         });
     }
     public void openStudentLogin(){
-        Intent intent=new Intent(this, StudentLogin.class);
+        Intent intent=new Intent(this, StudentLoginPage.class);
         startActivity(intent);
     }
 }

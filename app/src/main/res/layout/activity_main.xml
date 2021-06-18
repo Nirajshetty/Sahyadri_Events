@@ -84,7 +84,7 @@
                 app:layout_constraintVertical_bias="0.227" />
 
             <Button
-                android:id="@+id/btn_student"
+                android:id="@+id/btn_stu"
                 android:layout_width="110dp"
                 android:layout_height="60dp"
                 android:text="Student"

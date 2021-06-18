@@ -37,10 +37,25 @@ public class DBHelper extends SQLiteOpenHelper{
             return true;
         }
     }
+    public Boolean insertAdminDetails(String id,String password)
+    {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        ContentValues contentvalue=new ContentValues();
+        contentvalue.put("admin_id",id);
+        contentvalue.put("admin_password",password);
+        long result=DB.insert("admin_details",null,contentvalue);
+        if(result==-1)
+        {
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 
 
 
-    public Boolean updateStudentDetails(String mail,String name,String password,String usn,Number sem,String branch)
+    public Boolean updateStudentDetails(String mail,String name,String usn,Number sem,String branch)
     {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentvalue=new ContentValues();
@@ -48,7 +63,6 @@ public class DBHelper extends SQLiteOpenHelper{
         contentvalue.put("name",name);
         contentvalue.put("usn",usn);
         contentvalue.put("sem", (Integer) sem);
-        contentvalue.put("password",password);
         contentvalue.put("branch",branch);
         Cursor cursor=DB.rawQuery("Select * from student_details where mail=?",new String[]{mail});
         if(cursor.getCount()>0) {
