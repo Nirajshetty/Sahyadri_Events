@@ -50,6 +50,7 @@
                 android:layout_height="60dp"
                 android:text="REGISTER"
                 app:backgroundTint="#088F8F"
+                app:cornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -74,7 +75,7 @@
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
-                    android:hint="   Password"
+                    android:hint="Password"
                     android:inputType="textPassword"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -95,7 +96,7 @@
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
-                    android:hint="   Name"
+                    android:hint="Name"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,7 +116,7 @@
                     android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
-                    android:hint="   College Email-id"
+                    android:hint="College Email-id"
                     android:inputType="textEmailAddress"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>

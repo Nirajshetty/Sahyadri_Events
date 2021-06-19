@@ -14,17 +14,13 @@
         <activity android:name=".StudentLoginPage" />
         <activity android:name=".StudentProfile" />
         <activity
-            android:name=".Admin_Registrations"
-            android:parentActivityName=".AdminHomePage" />
+            android:name=".Admin_Registrations" />
         <activity
-            android:name=".Student_Registrations"
-            android:parentActivityName=".StudentLandingPage" />
+            android:name=".Student_Registrations" />
         <activity
-            android:name=".StudentRegisterEvent"
-            android:parentActivityName=".StudentLandingPage" />
+            android:name=".StudentRegisterEvent" />
         <activity
-            android:name=".Admin_Add_event"
-            android:parentActivityName=".AdminHomePage" />
+            android:name=".Admin_Add_event" />
         <activity android:name=".AdminHomePage" />
         <activity android:name=".StudentRegister" />
         <activity android:name=".AdminLogin" />

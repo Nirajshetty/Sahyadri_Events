@@ -32,17 +32,32 @@
 
 
             <Button
+                android:id="@+id/btn_back"
+                android:layout_width="129dp"
+                android:layout_height="57dp"
+                android:text="Back"
+                app:backgroundTint="#088F8F"
+                app:cornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.253"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.816" />
+
+            <Button
                 android:id="@+id/btn_admin_login"
                 android:layout_width="129dp"
                 android:layout_height="57dp"
                 android:text="Add Event"
                 app:backgroundTint="#088F8F"
+                app:cornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintHorizontal_bias="0.822"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.818" />
+                app:layout_constraintVertical_bias="0.816" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout1"
@@ -61,7 +76,7 @@
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
-                    android:hint="   Event Name"
+                    android:hint="Event Name"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,7 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
-                    android:hint="   Event ID(EventName_EventDate)"
+                    android:hint="Event ID(EventName_EventDate)"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,7 +119,7 @@
                     android:layout_height="100dp"
                     android:background="#FFFFFF"
                     android:gravity="top"
-                    android:hint="   Event  Description(with schedule)"
+                    android:hint="Event  Description(with schedule)"
                     android:inputType="text|textMultiLine"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -126,7 +141,7 @@
                     android:layout_width="252dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
-                    android:hint="   Meet Link"
+                    android:hint="Meet Link"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 

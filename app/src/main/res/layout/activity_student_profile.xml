@@ -43,6 +43,20 @@
             android:layout_width="match_parent"
             android:layout_height="440dp">
 
+            <Button
+                android:id="@+id/btn_back9"
+                android:layout_width="120dp"
+                android:layout_height="57dp"
+                android:text="Back"
+                app:backgroundTint="#088F8F"
+                app:cornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.245"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.958" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout8"
                 android:layout_width="256dp"
@@ -59,21 +73,23 @@
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
-                    android:hint="   Name"
+                    android:hint="Name"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_profile_update"
-                android:layout_width="103dp"
-                android:layout_height="60dp"
+                android:layout_width="120dp"
+                android:layout_height="57dp"
                 android:text="UPDATE"
                 app:backgroundTint="#088F8F"
+                app:cornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.842"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.961" />
+                app:layout_constraintVertical_bias="0.958" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout1"
@@ -92,7 +108,7 @@
                     android:layout_width="262dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
-                    android:hint="   Semester"
+                    android:hint="Semester"
                     android:inputType="number"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -115,7 +131,7 @@
                     android:layout_height="55dp"
                     android:background="#FFFFFF"
                     android:gravity="top"
-                    android:hint="   mail-Id"
+                    android:hint="mail-Id"
                     android:textSize="14sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -137,7 +153,7 @@
                     android:layout_width="255dp"
                     android:layout_height="53dp"
                     android:background="#FFFFFF"
-                    android:hint="   Branch"
+                    android:hint="Branch"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -158,7 +174,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
                     android:background="#FFFFFF"
-                    android:hint="   USN"
+                    android:hint="USN"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 

@@ -33,17 +33,32 @@
 
 
             <Button
+                android:id="@+id/btn_back5"
+                android:layout_width="120dp"
+                android:layout_height="57dp"
+                android:text="Back"
+                app:backgroundTint="#088F8F"
+                app:cornerRadius="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.258"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.373" />
+
+            <Button
                 android:id="@+id/btn_admin_login"
-                android:layout_width="129dp"
+                android:layout_width="120dp"
                 android:layout_height="57dp"
                 android:text="Register"
                 app:backgroundTint="#088F8F"
+                app:cornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintHorizontal_bias="0.787"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.369" />
+                app:layout_constraintVertical_bias="0.373" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout1"
@@ -61,7 +76,7 @@
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
-                    android:hint="   College mail  ID"
+                    android:hint="College mail  ID"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -82,7 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:background="#FFFFFF"
-                    android:hint="   Event ID"
+                    android:hint="Event ID"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 

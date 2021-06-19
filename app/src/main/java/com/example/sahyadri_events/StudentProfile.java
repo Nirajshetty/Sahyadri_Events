@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class StudentProfile extends AppCompatActivity {
 EditText student_name,student_mail,student_usn,student_sem,student_branch;
-Button btn_profile_update;
+Button btn_profile_update,btn_back9;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,7 @@ Button btn_profile_update;
         student_sem = findViewById(R.id.student_sem);
         student_branch = findViewById(R.id.student_branch);
         btn_profile_update=findViewById(R.id.btn_profile_update);
+        btn_back9=findViewById(R.id.btn_back9);
         DBHelper db =new DBHelper(this);
         Cursor c=db.getData(str);
         if(c.moveToFirst()){
@@ -60,6 +61,12 @@ Button btn_profile_update;
 
             }
         });
+        btn_back9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openStudentHome(str);
+            }
+        });
     }
     public void openStudentHomepage(){
 
@@ -67,6 +74,12 @@ Button btn_profile_update;
         Intent intent3=new Intent(getApplicationContext(), StudentLandingPage.class);
         intent3.putExtra("message_key", mailTXT);
         startActivity(intent3);
+        finish();
+    }
+    public void openStudentHome(String str){
+        Intent intent4=new Intent(getApplicationContext(), StudentLandingPage.class);
+        intent4.putExtra("message_key", str);
+        startActivity(intent4);
         finish();
     }
 }
