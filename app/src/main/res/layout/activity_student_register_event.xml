@@ -15,12 +15,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" >
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="358dp"
-        android:layout_height="258dp"
+        android:layout_width="363dp"
+        android:layout_height="168dp"
         android:layout_marginBottom="16dp"
         app:cardCornerRadius="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,8 +30,8 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="369dp"
-            android:layout_height="569dp">
+            android:layout_width="match_parent"
+            android:layout_height="193dp">
 
 
             <Button
@@ -41,13 +43,13 @@
                 app:cornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.258"
+                app:layout_constraintHorizontal_bias="0.222"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.373" />
+                app:layout_constraintVertical_bias="0.682" />
 
             <Button
-                android:id="@+id/btn_admin_login"
+                android:id="@+id/btn_student_event_register"
                 android:layout_width="120dp"
                 android:layout_height="57dp"
                 android:text="Register"
@@ -55,30 +57,10 @@
                 app:cornerRadius="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.787"
+                app:layout_constraintHorizontal_bias="0.802"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.373" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout1"
-                android:layout_width="256dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.544"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.056">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="256dp"
-                    android:layout_height="wrap_content"
-                    android:background="#FFFFFF"
-                    android:hint="College mail  ID"
-                    android:textSize="14sp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                app:layout_constraintVertical_bias="0.676" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout3"
@@ -93,7 +75,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin1_id"
+                    android:id="@+id/student_event_id"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:background="#FFFFFF"

@@ -46,7 +46,7 @@
                 app:layout_constraintVertical_bias="0.816" />
 
             <Button
-                android:id="@+id/btn_admin_login"
+                android:id="@+id/btn_add_event"
                 android:layout_width="129dp"
                 android:layout_height="57dp"
                 android:text="Add Event"
@@ -72,7 +72,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin_id"
+                    android:id="@+id/event_name"
                     android:layout_width="256dp"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF"
@@ -93,7 +93,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin1_id"
+                    android:id="@+id/event_id"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
@@ -114,7 +114,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin2_id3"
+                    android:id="@+id/event_description"
                     android:layout_width="278dp"
                     android:layout_height="100dp"
                     android:background="#FFFFFF"
@@ -137,7 +137,7 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/admin1_id5"
+                    android:id="@+id/event_link"
                     android:layout_width="252dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
