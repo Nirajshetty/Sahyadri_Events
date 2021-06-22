@@ -4,16 +4,19 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
+
 public class DBHelper extends SQLiteOpenHelper{
     public DBHelper(Context context){
-        super(context,"SahyadriDBevents.db",null,2);
+        super(context,"SahyadrieventsData.db",null,2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table student_details(name TEXT ,mail TEXT primary key,password TEXT,usn TEXT,sem NUMBER,branch TEXT)");
         db.execSQL("create table admin_details(admin_password TEXT,admin_id TEXT primary key)");
-        db.execSQL("create table event_details(event_name TEXT ,event_description TEXT,event_id TEXT primary key,event_link TEXT)");
+        db.execSQL("create table event_details(event_name TEXT ,event_description TEXT,event_id TEXT primary key,event_link TEXT,admin_id TEXT,FOREIGN KEY(admin_id) REFERENCES admin_details(admin_id) on delete cascade)");
         db.execSQL("create table registered_students(ID INTEGER PRIMARY KEY AUTOINCREMENT,mail TEXT ,event_id TEXT,FOREIGN KEY(mail) REFERENCES student_details(mail) on delete cascade,FOREIGN KEY(event_id) REFERENCES event_details(event_id) on delete cascade)");
     }
 
@@ -41,7 +44,7 @@ public class DBHelper extends SQLiteOpenHelper{
             return true;
         }
     }
-    public Boolean insertEventDetails(String event_name,String event_description,String event_id,String event_link)
+    public Boolean insertEventDetails(String event_name,String event_description,String event_id,String event_link,String admin_id)
     {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentvalue=new ContentValues();
@@ -49,6 +52,7 @@ public class DBHelper extends SQLiteOpenHelper{
         contentvalue.put("event_description",event_description);
         contentvalue.put("event_id",event_id);
         contentvalue.put("event_link",event_link);
+        contentvalue.put("admin_id",admin_id);
         long result=DB.insert("event_details",null,contentvalue);
         if(result==-1)
         {
@@ -170,5 +174,19 @@ public class DBHelper extends SQLiteOpenHelper{
         SQLiteDatabase DB = this.getWritableDatabase();
         Cursor cursor=DB.rawQuery("Select * from student_details where mail=?",new String[]{mail});
         return cursor;
+    }
+    public ArrayList<String> getEventId()
+    {
+        ArrayList<String> event_ids=new ArrayList<>();
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor=DB.query("event_details",null,null,null,null,null,null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast())
+        {
+            event_ids.add(cursor.getString(cursor.getColumnIndex("event_id")));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return event_ids;
     }
 }

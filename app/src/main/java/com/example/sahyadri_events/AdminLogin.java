@@ -42,8 +42,10 @@ public class AdminLogin extends AppCompatActivity {
         });
     }
     public void openAdminHome(){
-        Intent intent=new Intent(this, AdminHomePage.class);
-        startActivity(intent);
+        String idTXT=admin_id.getText().toString();
+        Intent intent3=new Intent(getApplicationContext(), AdminHomePage.class);
+        intent3.putExtra("message_key", idTXT);
+        startActivity(intent3);
         finish();
     }
 }

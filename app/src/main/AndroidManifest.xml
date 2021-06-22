@@ -9,18 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sahyadri_events">
-        <activity android:name=".ssss"></activity>
+        <activity android:name=".AdminSearchEvent"></activity>
+        <activity android:name=".ssss" />
         <activity android:name=".StudentLandingPage" />
         <activity android:name=".StudentLoginPage" />
         <activity android:name=".StudentProfile" />
-        <activity
-            android:name=".Admin_Registrations" />
-        <activity
-            android:name=".Student_Registrations" />
-        <activity
-            android:name=".StudentRegisterEvent" />
-        <activity
-            android:name=".Admin_Add_event" />
+        <activity android:name=".Admin_Registrations" />
+        <activity android:name=".Student_Registrations" />
+        <activity android:name=".StudentRegisterEvent" />
+        <activity android:name=".Admin_Add_event" />
         <activity android:name=".AdminHomePage" />
         <activity android:name=".StudentRegister" />
         <activity android:name=".AdminLogin" />

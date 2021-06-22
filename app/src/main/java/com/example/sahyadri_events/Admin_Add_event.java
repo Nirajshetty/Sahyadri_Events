@@ -16,6 +16,10 @@ public class Admin_Add_event extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_event);
+
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("message_key");
+
         btn_back = findViewById(R.id.btn_back);
         btn_add_event = findViewById(R.id.btn_add_event);
         event_name=findViewById(R.id.event_name);
@@ -26,7 +30,7 @@ public class Admin_Add_event extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openAdminHome();
+                openAdminHome(str);
             }
         });
         btn_add_event.setOnClickListener(new View.OnClickListener() {
@@ -41,11 +45,11 @@ public class Admin_Add_event extends AppCompatActivity {
                     Toast.makeText(Admin_Add_event.this,"Please Enter all the Details",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                        Boolean checkInserted =db.insertEventDetails(eName,eDescription,eId,eLink);
+                        Boolean checkInserted =db.insertEventDetails(eName,eDescription,eId,eLink,str);
                         if(checkInserted==true)
                         {
                             Toast.makeText(Admin_Add_event.this,"Event Added Successfully!",Toast.LENGTH_SHORT).show();
-                            openAdminHome();
+                            openAdminHome(str);
                         }
                         else
                         {
@@ -55,9 +59,10 @@ public class Admin_Add_event extends AppCompatActivity {
             }
         });
     }
-    public void openAdminHome(){
-        Intent intent=new Intent(this, AdminHomePage.class);
-        startActivity(intent);
+    public void openAdminHome(String str){
+        Intent intent3=new Intent(getApplicationContext(), AdminHomePage.class);
+        intent3.putExtra("message_key", str);
+        startActivity(intent3);
         finish();
     }
 }

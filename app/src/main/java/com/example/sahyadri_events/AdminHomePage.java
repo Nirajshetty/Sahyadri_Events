@@ -12,12 +12,16 @@ Button btn_addEvent,btn_logout,btn_admin_registrations;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("message_key");
+
         setContentView(R.layout.activity_admin_home_page);
         btn_addEvent=findViewById(R.id.btn_register);
         btn_addEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                openAddEvent();
+                openAddEvent(str);
             }
         });
         btn_logout=findViewById(R.id.btn_logout);
@@ -31,21 +35,25 @@ Button btn_addEvent,btn_logout,btn_admin_registrations;
         btn_admin_registrations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                openAdmin_registrations();
+                openAdmin_registrations(str);
             }
         });
     }
-    public void openAddEvent(){
-        Intent intent=new Intent(this,Admin_Add_event.class);
-        startActivity(intent);
+    public void openAddEvent(String str){
+        Intent intent3=new Intent(getApplicationContext(), Admin_Add_event.class);
+        intent3.putExtra("message_key", str);
+        startActivity(intent3);
+        finish();
     }
     public void logout(){
         Intent intent=new Intent(this,AdminLogin.class);
         startActivity(intent);
         finish();
     }
-    public void openAdmin_registrations(){
-        Intent intent=new Intent(this,Admin_Registrations.class);
-        startActivity(intent);
+    public void openAdmin_registrations(String str){
+        Intent intent3=new Intent(getApplicationContext(), Admin_Registrations.class);
+        intent3.putExtra("message_key", str);
+        startActivity(intent3);
+        finish();
     }
 }
