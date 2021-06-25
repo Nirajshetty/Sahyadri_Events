@@ -175,7 +175,21 @@ public class DBHelper extends SQLiteOpenHelper{
         Cursor cursor=DB.rawQuery("Select * from student_details where mail=?",new String[]{mail});
         return cursor;
     }
-    public ArrayList<String> getEventId()
+    public ArrayList<String> getEventId(String admin_id)
+    {
+        ArrayList<String> event_ids=new ArrayList<>();
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor=DB.rawQuery("Select event_id from event_details where admin_id=?",new String[]{admin_id});
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast())
+        {
+            event_ids.add(cursor.getString(cursor.getColumnIndex("event_id")));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return event_ids;
+    }
+    public ArrayList<String> getAllEventId()
     {
         ArrayList<String> event_ids=new ArrayList<>();
         SQLiteDatabase DB = this.getWritableDatabase();

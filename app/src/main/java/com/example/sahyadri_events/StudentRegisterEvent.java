@@ -5,21 +5,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class StudentRegisterEvent extends AppCompatActivity {
 Button btn_back5,btn_student_event_register;
-EditText student_event_id;
+private AutoCompleteTextView student_event_id;
+    private ArrayList<String> event_ids;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_register_event);
+        student_event_id=findViewById(R.id.student_event_id);
         DBHelper db =new DBHelper(this);
         Intent intent = getIntent();
         String str = intent.getStringExtra("message_key");
-        student_event_id=findViewById(R.id.student_event_id);
+
+        event_ids=db.getAllEventId();
+        ArrayAdapter<String> array=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,event_ids);
+        student_event_id.setAdapter(array);
+
+
         btn_student_event_register=findViewById(R.id.btn_student_event_register);
         btn_back5=findViewById(R.id.btn_back5);
         btn_back5.setOnClickListener(new View.OnClickListener() {

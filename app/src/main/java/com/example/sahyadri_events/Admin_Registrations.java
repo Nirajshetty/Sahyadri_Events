@@ -24,7 +24,7 @@ public class Admin_Registrations extends AppCompatActivity {
         String str = intent.getStringExtra("message_key");
         DBHelper db=new DBHelper(this);
         Event_autoComplete=findViewById(R.id.Event_autoComplete);
-        event_ids=db.getEventId();
+        event_ids=db.getEventId(str);
         ArrayAdapter<String> array=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,event_ids);
         Event_autoComplete.setAdapter(array);
         btn_back3 = findViewById(R.id.btn_back3);
