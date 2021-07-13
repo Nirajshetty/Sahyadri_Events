@@ -44,6 +44,7 @@ private AutoCompleteTextView student_event_id;
             @Override
             public void onClick(View v) {
                 String sEvent_id=student_event_id.getText().toString();
+
                 if(sEvent_id.equals(""))
                 {
                     Toast.makeText(StudentRegisterEvent.this,"Please Enter all the Details",Toast.LENGTH_SHORT).show();
@@ -51,12 +52,18 @@ private AutoCompleteTextView student_event_id;
                 else{
                     Boolean checkUser=db.checkEvent_id(sEvent_id);
                     if(checkUser) {
-                        Boolean checkInserted = db.insertRegisterDetails(str, sEvent_id);
-                        if (checkInserted == true) {
-                            Toast.makeText(StudentRegisterEvent.this, "Event Registered Successfully!", Toast.LENGTH_SHORT).show();
-                            openStudentHome(str);
-                        } else {
-                            Toast.makeText(StudentRegisterEvent.this, "Failed", Toast.LENGTH_SHORT).show();
+                        Boolean checkEventRegistered=db.checkEventRegistered(str,sEvent_id);
+                        if(!checkEventRegistered) {
+                            Boolean checkInserted = db.insertRegisterDetails(str, sEvent_id);
+                            if (checkInserted == true) {
+                                Toast.makeText(StudentRegisterEvent.this, "Event Registered Successfully!", Toast.LENGTH_SHORT).show();
+                                openStudentHome(str);
+                            } else {
+                                Toast.makeText(StudentRegisterEvent.this, "Failed", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else{
+                            Toast.makeText(StudentRegisterEvent.this, "Already Registered", Toast.LENGTH_SHORT).show();
                         }
                     }
                     else{

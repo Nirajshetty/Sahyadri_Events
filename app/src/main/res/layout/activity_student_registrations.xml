@@ -78,8 +78,12 @@
         app:layout_constraintVertical_bias="0.117" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="413dp"
-        android:layout_height="609dp"
+        android:id="@+id/student_recycler"
+        android:layout_width="410dp"
+        android:layout_height="597dp"
+        android:paddingLeft="?attr/actionBarSize"
+        android:paddingTop="?attr/actionBarSize"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

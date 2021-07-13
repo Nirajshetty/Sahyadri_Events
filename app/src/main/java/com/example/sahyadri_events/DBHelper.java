@@ -133,6 +133,18 @@ public class DBHelper extends SQLiteOpenHelper{
             return false;
         }
     }
+    public Boolean checkEventRegistered(String mail,String event_id)
+    {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor=DB.rawQuery("Select * from registered_students where mail=? and event_id=?",new String[]{mail,event_id});
+        if(cursor.getCount()>0) {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     public Boolean checkEvent_id(String event_id)
     {
         SQLiteDatabase DB = this.getWritableDatabase();
@@ -202,5 +214,30 @@ public class DBHelper extends SQLiteOpenHelper{
         }
         cursor.close();
         return event_ids;
+    }
+    Cursor readStudentRegisteredEventData(String mail){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery("Select event_name, event_description, registered_students.event_id, admin_id,event_link from event_details Inner join registered_students on event_details.event_id=registered_students.event_id where registered_students.mail=?",new String[]{mail});
+        }
+        return cursor;
+    }
+    Cursor readEventDetails(){
+        SQLiteDatabase dbb = this.getReadableDatabase();
+        String ss="Select * from event_details";
+        Cursor cursor = null;
+        if(dbb != null){
+            cursor = dbb.rawQuery(ss,null);
+        }
+        return cursor;
+    }
+    Cursor readAdminEventDetails(String id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery("Select * from event_details where admin_id=?",new String[]{id});
+        }
+        return cursor;
     }
 }

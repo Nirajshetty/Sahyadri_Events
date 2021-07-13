@@ -1,6 +1,7 @@
 package com.example.sahyadri_events;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 
 public class Admin_Registrations extends AppCompatActivity {
     Button btn_back3;
+    RecyclerView admin_recycler;
     private AutoCompleteTextView Event_autoComplete;
     private ArrayList<String> event_ids;
     @Override

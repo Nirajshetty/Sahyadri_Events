@@ -57,7 +57,6 @@ public class StudentLoginPage extends AppCompatActivity {
         startActivity(intent1);
     }
     public void openStudentHomepage(){
-
         String mailTXT=mail.getText().toString();
         Intent intent3=new Intent(getApplicationContext(), StudentLandingPage.class);
         intent3.putExtra("message_key", mailTXT);
