@@ -240,4 +240,13 @@ public class DBHelper extends SQLiteOpenHelper{
         }
         return cursor;
     }
+
+    Cursor readAdminRegistrationData(String admin_id, String event_id_auto){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery("Select name, registered_students.mail, sem,branch,usn from event_details Inner join  registered_students on event_details.event_id=registered_students.event_id Inner join student_details on student_details.mail=registered_students.mail where event_details.admin_id=? and registered_students.event_id=?",new String[]{admin_id,event_id_auto});
+        }
+        return cursor;
+    }
 }

@@ -43,6 +43,7 @@ ArrayList<String>  id,event_name,event_id_recycler,event_link;
         event_id_recycler = new ArrayList<>();
         event_link= new ArrayList<>();
         id=new ArrayList<>();
+
         storeDataInArrays(mail);
 
         customAdapter = new CustomAdapter(Student_Registrations.this,this,id,event_name,event_id_recycler,event_link);

@@ -46,7 +46,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, final int position) {
-        holder.id_txt.setText(String.valueOf(id.get(position)));
         holder.event_name_text.setText(String.valueOf(event_name.get(position)));
         holder.event_id_txt.setText(String.valueOf(event_id_recycler.get(position)));
         holder.event_link_txt.setText(String.valueOf(event_link.get(position)));
@@ -64,7 +63,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            id_txt = itemView.findViewById(R.id.book_id_txt);
             event_name_text = itemView.findViewById(R.id.book_title_txt);
             event_id_txt = itemView.findViewById(R.id.book_author_txt);
             event_link_txt=itemView.findViewById(R.id.txt_meet_link);

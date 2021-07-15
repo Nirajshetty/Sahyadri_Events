@@ -40,7 +40,6 @@ public class AdminHomeAdapter extends RecyclerView.Adapter<AdminHomeAdapter.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull AdminHomeAdapter.MyViewHolder holder, int position) {
-        holder.id_txt.setText(String.valueOf(id.get(position)));
         holder.event_name_text.setText(String.valueOf(event_name.get(position)));
         holder.event_id_txt.setText(String.valueOf(event_id_recycler.get(position)));
         holder.event_desc_txt.setText(String.valueOf(event_description.get(position)));
@@ -59,7 +58,6 @@ public class AdminHomeAdapter extends RecyclerView.Adapter<AdminHomeAdapter.MyVi
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            id_txt = itemView.findViewById(R.id.book_id_txt);
             event_name_text = itemView.findViewById(R.id.book_title_txt);
             event_id_txt = itemView.findViewById(R.id.book_author_txt);
             event_desc_txt = itemView.findViewById(R.id.txt_desc);

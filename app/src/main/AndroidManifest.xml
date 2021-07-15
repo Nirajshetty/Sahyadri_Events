@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sahyadri_events">
-
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +14,7 @@
         <activity android:name=".StudentLandingPage" />
         <activity android:name=".StudentLoginPage" />
         <activity android:name=".StudentProfile" />
-        <activity android:name=".Admin_Registrations" />
+        <activity android:name=".Admin_Registrations" android:windowSoftInputMode="adjustNothing"/>
         <activity android:name=".Student_Registrations" />
         <activity android:name=".StudentRegisterEvent" />
         <activity android:name=".Admin_Add_event" />
